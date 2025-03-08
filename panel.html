@@ -14,10 +14,14 @@
         margin-bottom: 10px;
       }
 
+      h3.sectionTitle {
+        margin: 12px 0;
+      }
+
       .row > .label {
         margin: 0 10px 0 0;
         font-size: 12px;
-        font-weight: 400;
+        font-weight: 600;
       }
 
       .row > .value {
@@ -28,8 +32,9 @@
   </head>
   <body>
     <h2>React Performance Monitor</h2>
-    <div id="memoryContainer">
-      <h4>📊 Memory Usage:</h4>
+    <h3 id="tabUrl"></h3>
+    <section id="memoryContainer">
+      <h3 class="sectionTitle">📊 Memory Usage:</h3>
 
       <span class="row used">
         <h3 class="label">Used JS Heap Size:</h3>
@@ -43,8 +48,11 @@
         <h3 class="label">JS Heap Size Limit:</h3>
         <p class="value">Loading...</p>
       </span>
-    </div>
-    <p>🔄 Rerendering Count: <span id="renders">0</span></p>
+    </section>
+    <section>
+      <h3 class="sectionTitle">🔄 Rerendering Count:</h3>
+      <span id="renders">0</span>
+    </section>
   </body>
   <script src="panel.js"></script>
 </html>
