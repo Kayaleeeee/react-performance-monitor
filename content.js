@@ -7,6 +7,7 @@ if (window.isContentScriptInjected) {
   let parentUrl = "";
   let memoryInterval = null;
 
+  // TODO: 모니터 띄운 탭이랑 모니터랑 연동되도록 변경하기
   chrome.runtime.onMessage.addListener((message) => {
     if (message.type === "PANEL_OPEN") {
       console.log("✅ 패널이 열림, 메모리 데이터 전송 시작");
