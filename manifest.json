@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "React Performance Monitor",
+  "version": "1.0",
+  "description": "React 웹사이트의 메모리, 리렌더링, 페인트 성능을 모니터링합니다.",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_title": "panel.html"
+  }
+}
